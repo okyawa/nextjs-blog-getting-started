@@ -30,6 +30,7 @@ export default function Home({
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="robots" content="noindex"></meta>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
