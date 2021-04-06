@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "serve": "npx http-serve out/"
   },
   "dependencies": {
     "date-fns": "^2.19.0",
