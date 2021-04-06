@@ -15,10 +15,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (params === undefined) {
-    throw new Error('undefined params.id')
+  const id = params?.id as string
+  if (id === '') {
+    // NotFoundを返す
+    return {
+      notFound: true,
+    }
   }
-  const postData = await getPostData(params.id as string)
+  const postData = await getPostData(id)
   return {
     props: {
       postData
